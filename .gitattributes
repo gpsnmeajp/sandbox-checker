@@ -1,0 +1,10 @@
+* text=auto
+
+# bash fails on CRLF line endings, so keep shell scripts LF everywhere.
+*.sh  text eol=lf
+
+# Windows PowerShell is happiest with CRLF.
+*.ps1 text eol=crlf
+
+*.md   text eol=lf
+*.json text eol=lf

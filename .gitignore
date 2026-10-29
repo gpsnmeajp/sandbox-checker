@@ -1,0 +1,27 @@
+# Probe output can contain hostnames, usernames, paths and env var names.
+# Keep reports out of version control.
+*.log
+report*.txt
+report*.md
+sandbox-report*
+
+# skill-creator eval / benchmark workspaces and packaged skills
+*-workspace/
+*.skill
+feedback.json
+
+# Local agent settings
+.claude/settings.local.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp

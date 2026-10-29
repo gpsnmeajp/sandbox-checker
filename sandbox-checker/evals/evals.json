@@ -1,0 +1,23 @@
+{
+  "skill_name": "sandbox-checker",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "これから auto-approve モードでエージェントに知らないリポジトリのテストを走らせたいんだけど、今この環境ってどのくらい隔離されてる？最悪何が起きうるか教えて。ネットには繋がなくていい。",
+      "expected_output": "PowerShell/bash スクリプトをネットワーク検査なしで実行し、隔離レベル(L0-L4)、読める認証情報、書き込める範囲、推奨事項を含むレポート。秘密の値は出力しない。ファイルは作成しない。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "am I running inside a docker container or directly on my laptop? also can you check whether outbound internet and the cloud metadata endpoint are reachable from here - I'm fine with you making a couple of test connections.",
+      "expected_output": "Container/VM detection with cited evidence, plus --network / -Network egress results including the metadata TCP check, in an English report.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "セキュリティレビューの一環で、このエージェントがどの認証情報や環境変数のシークレットにアクセスできてしまうのか一覧にしてほしい。中身は見なくていいです。",
+      "expected_output": "Credentials section focused report listing paths and env var NAMES only, with severity per item, no secret values leaked.",
+      "files": []
+    }
+  ]
+}
